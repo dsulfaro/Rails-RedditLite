@@ -1,0 +1,20 @@
+<% action = new_user ? users_url : session_url %>
+
+<form action="<%= action %>" method="post">
+  <%= auth_token %>
+
+  <label>Username
+    <input type="text" name="user[username]">
+  </label>
+
+  <br>
+
+  <label>Password
+    <input type="password" name="user[password]">
+  </label>
+
+  <br>
+
+  <input type="submit">
+
+</form>

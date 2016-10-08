@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RedditOnRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <h3>Welcome, <%= current_user ? current_user.username : "Guest"%></h3>
+  <%= link_to "Home", subs_url %>
+  <%= login_logout %>
+</header>
+<%= yield %>
+
+</body>
+</html>

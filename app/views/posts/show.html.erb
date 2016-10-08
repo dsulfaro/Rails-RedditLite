@@ -1,0 +1,9 @@
+<h3> <%= @post.url ? link_to(@post.title, full_url(@post.url)) : @post.title %></h3>
+
+<i><%= @post.author.username %> wrote... </i>
+<br/>
+<%= space_content(@post.content) %>
+
+<% if current_user == @post.author %>
+  <%= link_to "Edit", edit_post_url(@post) %>
+<% end %>
